@@ -1,0 +1,31 @@
+<h1>Add:</h1>
+<form method="post" action="{{route('add')}}">
+    {!! csrf_field() !!}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="slug">Slug</label>
+        <input type="text" class="form-control" id="slug" name="slug" required>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" id="category" name="category_id">
+            @foreach($allCategory as $k=>$category)
+                <option value="{{$category->id}}" @if($k == 0) selected @endif>{{$category->name}}</option>
+            @endforeach
+        </select>
+    </div>
+    <input type="hidden" name="model" value="{{$slug}}">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <button type="submit" class="btn btn-primary submitAdd">Add</button>
+</form>

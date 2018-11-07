@@ -1,0 +1,192 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+@import "variables";
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Font Awesome
+@import '~font-awesome/scss/font-awesome';
+
+@font-face {
+  font-family: OpenSans;
+  src: url('font/OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: Donis;
+  src: url('font/Donis/Dosis-SemiBold.ttf');
+}
+
+body {
+  box-sizing: border-box;
+  font-family: OpenSans;
+  line-height: 1.4;
+  background-color: white;
+}
+
+#login{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  .panel{
+    h1.panel-heading{
+      margin-top: 0;
+    }
+  }
+  button{
+    width: 200px;
+    text-transform: uppercase;
+  }
+}
+
+#left-menu{
+  .logo{
+    padding: 15px 0;
+    img{
+      width: 100%;
+      height: 50px;
+    }
+  }
+  .menu{
+    ul{
+      padding: 0;
+      list-style: none;
+      li{
+        padding: 4px 0;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.dimmer{
+  color: white;
+  img{
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+    filter: brightness(60%);
+  }
+  > div{
+    position: absolute;
+    width: 93%;
+    text-align: center;
+  }
+  .title{
+    top: 10px;
+    color: bisque;
+  }
+  .description{
+    top: 265px;
+    padding: 0 40px;
+  }
+  .count{
+    top: 100px;
+    font-size: 100px;
+    .circle{
+      background-color: cadetblue;
+      border-radius: 50%;
+      padding: 0px 40px;
+      color: khaki;
+    }
+  }
+  .button{
+    bottom: 35px;
+  }
+}
+
+#content{
+  .top{
+    .breadcrumb{
+      font-size: 17px;
+      padding: 28px 15px 28px 0;
+      margin: 0;
+      float: left;
+    }
+    .account{
+      float: right;
+      padding: 20px 0 0 15px;
+      button{
+        min-width: 160px;
+      }
+    }
+  }
+  .dimmer{
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  .crud{
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    button{
+      min-width: 160px;
+      margin-left: 10px;
+    }
+  }
+  .pagination{
+    float: right;
+  }
+  .preview-image{
+    img{
+      width: 500px;
+      height: 500px;
+      margin-left: 20px;
+    }
+    &.imageInvoice{
+      img{
+        width: 105px;
+        height: 60px;
+      }
+    }
+  }
+  .gallery{
+    img{
+      width: 80px;
+      height: 80px;
+      margin-left: 20px;
+    }
+  }
+  #edit{
+    .submitEdit{
+      min-width: 160px;
+      margin: 20px 0;
+    }
+  }
+  #add{
+    .submitAdd{
+      min-width: 160px;
+      margin: 20px 0;
+    }
+  }
+  table{
+    text-align: center;
+    thead{
+      th{
+        text-align: center;
+      }
+    }
+    .name{
+      width: 150px;
+    }
+    .image{
+      img{
+        width: 150px;
+      }
+    }
+    .imageBanner{
+      img{
+        width: 100px;
+      }
+    }
+    .thumb{
+      img{
+        margin-right: 10px;
+      }
+    }
+  }
+}
